@@ -16,7 +16,7 @@ function createWeatherFormHtml() {
     return /*HTML*/ `
     <div class="weatherForm">
         <input type="text" onkeydown="if (event.code === 'Enter')getWeatherFormData();" 
-        oninput="cityInput = this.value;" class="cityInput" placeholder ="Enter city"/>
+        oninput="cityInput = this.value;" class="cityInput" placeholder ="Enter city" value="${cityInput}"/>
         
         <button type="submit" onclick="getWeatherFormData()">Get Weather</button>
     </div>
