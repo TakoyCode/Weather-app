@@ -15,7 +15,7 @@ function updateView() {
 function createWeatherFormHtml() {
     return /*HTML*/ `
     <div class="weatherForm">
-        <input type="text" oninput="cityInput = this.value" class="cityInput" placeholder ="Enter city"/>
+        <input type="text" onkeydown="if (event.code === 'Enter')getWeatherFormData();" oninput="cityInput = this.value;" class="cityInput" placeholder ="Enter city"/>
         <button type="submit" onclick="getWeatherFormData()">Get Weather</button>
     </div>
     `;
@@ -24,14 +24,15 @@ function createWeatherFormHtml() {
 function createCardHtml() {
     return /*HTML*/ `
     <div class="card" style="display:${showingCard ? "" : "none"}">
-    ${createWeatherInfoHtml()}
+    ${weatherInfo.html}
     ${createDisplayErrorHtml()}
     </div>
     `;
 }
 
 function createWeatherInfoHtml() {
-    return /*HTML*/ `
+    weatherInfo.html = "";
+    weatherInfo.html += /*HTML*/ `
     <h1 class="cityDisplay">${weatherInfo.city}</h1>
     <p class="tempDisplay">${(weatherInfo.temp - 273.15).toFixed(1)}°C</p>
     <p class="humidityDisplay">Humidity: ${weatherInfo.humidity}%</p>

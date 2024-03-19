@@ -6,4 +6,6 @@ let errorDisplay = "";
 
 let showingCard = false;
 
-let weatherInfo = {};
+let weatherInfo = {
+    html: "",
+};

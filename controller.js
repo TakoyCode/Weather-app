@@ -10,7 +10,7 @@ async function getWeatherFormData() {
         }
     }
     else {
-        displayError("Pelase enter a city");
+        displayError("Please enter a city");
     }
     cityInput = "";
 }
@@ -39,6 +39,7 @@ function displayWeatherInfo(data) {
 
     showingCard = true;
     errorDisplay = "";
+    createWeatherInfoHtml();
     updateView();
 }
 
