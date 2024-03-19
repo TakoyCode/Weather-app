@@ -15,7 +15,9 @@ function updateView() {
 function createWeatherFormHtml() {
     return /*HTML*/ `
     <div class="weatherForm">
-        <input type="text" onkeydown="if (event.code === 'Enter')getWeatherFormData();" oninput="cityInput = this.value;" class="cityInput" placeholder ="Enter city"/>
+        <input type="text" onkeydown="if (event.code === 'Enter')getWeatherFormData();" 
+        oninput="cityInput = this.value;" class="cityInput" placeholder ="Enter city"/>
+        
         <button type="submit" onclick="getWeatherFormData()">Get Weather</button>
     </div>
     `;
