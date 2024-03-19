@@ -1,3 +1,1 @@
-Followed this Brocode video https://www.youtube.com/watch?v=VaDUGPMjzOM
-<br/>
-And remade it into MVC
+Followed this Brocode video https://www.youtube.com/watch?v=VaDUGPMjzOM And remade it into MVC
