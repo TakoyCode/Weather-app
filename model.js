@@ -8,4 +8,9 @@ let showingCard = false;
 
 let weatherInfo = {
     html: "",
+    city: null,
+    temp: null,
+    humidity: null,
+    description: null,
+    id: null,
 };

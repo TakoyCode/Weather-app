@@ -30,17 +30,24 @@ async function getWeatherData(city) {
 }
 
 function displayWeatherInfo(data) {
-    const { name: city,
-        main: { temp, humidity },
-        weather: [{ description, id }] } = data;
-
-    weatherInfo = {
-        city, temp, humidity, description, id,
-    };
+    weatherInfo.city = data.name;
+    weatherInfo.temp = data.main.temp;
+    weatherInfo.humidity = data.main.humidity;
+    weatherInfo.description = data.weather[0].description;
+    weatherInfo.id = data.weather[0].id;
 
     showingCard = true;
     errorDisplay = "";
     createWeatherInfoHtml();
+
+    /* Dette under er det samme som linje 33-37, 
+    men det over gir mer mening når man ikke har lært om object destructuring.
+    const { name: city,
+        main: { temp, humidity },
+        weather: [{ description, id }] } = data;
+    weatherInfo = {
+        city, temp, humidity, description, id,
+    }; */
 }
 
 function displayError(error) {
